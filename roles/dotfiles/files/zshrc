@@ -25,5 +25,8 @@ antigen bundle zsh-users/zsh-completions src
 # Load the theme.
 antigen theme robbyrussell
 
+source /usr/local/opt/chruby/share/chruby/chruby.sh
+source /usr/local/opt/chruby/share/chruby/auto.sh
+
 # Tell antigen that you're done.
 antigen apply
