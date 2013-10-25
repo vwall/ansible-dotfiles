@@ -4,34 +4,20 @@
 ruby:
   version: 2.0.0-p247
 
-system: osx
-os: osx
-
-# executables ------------------------------------------------------------- {{{
+# executables -------------------------------------------------------------
 executables:
   brew: /usr/local/bin/brew
   vim: /Applications/MacVim.app/Contents/MacOS/Vim
   zsh: /usr/local/bin/zsh
-# /executables ------------------------------------------------------------ }}}
 
-# directories ------------------------------------------------------------- {{{
+# directories -------------------------------------------------------------
 directories:
   etc: /usr/local/etc
   var: /usr/local/var
-# /directories ------------------------------------------------------------ }}}
-
-# auth -------------------------------------------------------------------- {{{
+# auth --------------------------------------------------------------------
 vwall:
   user:
     name: vwall
     group: staff
     shell: "{{ executables.zsh }}"
-
-  template_home: home/vwall
   home: /Users/vwall
-  system: osx
-  ruby:
-    version: "{{ ruby.version }}"
-  rbenv:
-    global: "{{ ruby.version }}"
-# /auth ------------------------------------------------------------------- }}}
