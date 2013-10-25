@@ -1,0 +1,29 @@
+source ~/.antigen/antigen.zsh
+
+# Load the oh-my-zsh's library.
+antigen use oh-my-zsh
+
+antigen bundle git
+antigen bundle command-not-found
+
+# Syntax highlighting bundle.
+antigen bundle zsh-users/zsh-syntax-highlighting
+
+# ZSH port of Fish shell's history search feature
+antigen bundle zsh-users/zsh-history-substring-search
+
+# bind UP and DOWN arrow keys
+for keycode in '[' '0'; do
+  bindkey "^[${keycode}A" history-substring-search-up
+  bindkey "^[${keycode}B" history-substring-search-down
+done
+unset keycode
+
+# nicoulaj's moar completion files for zsh
+antigen bundle zsh-users/zsh-completions src
+
+# Load the theme.
+antigen theme robbyrussell
+
+# Tell antigen that you're done.
+antigen apply

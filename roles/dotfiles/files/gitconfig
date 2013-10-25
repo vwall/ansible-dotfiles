@@ -1,0 +1,127 @@
+[user]
+  name = Vincent Waller
+  email = vrwaller@gmail.com
+[alias]
+  # blame
+  blame = blame -w
+
+  # branch
+  b  = branch
+  ba = branch -av
+  bd = branch -d
+  bm = branch -m
+  bs = show-branch
+
+  # checkout/fetch/merge/push/rebase
+  # checkout
+  co  = checkout
+  cob = checkout -b
+  co0 = checkout HEAD --
+  com = checkout master
+  # fetch
+  f   = fetch
+  fm  = pull
+  fo  = fetch origin
+  fu  = fetch upstream
+  # merge
+  m   = merge
+  mom = merge origin/master
+  mos = merge origin/support
+  mum = merge upstream/master
+  # push
+  p   = push
+  pa  = push --all
+  pt  = push --tags
+  # rebase
+  r   = rebase
+  ra  = rebase --abort
+  rc  = rebase --continue
+  ri  = rebase --interactive
+  rs  = rebase --skip
+  rom = rebase origin/master
+  ros = rebase origin/support
+  rum = rebase upstream/master
+  riom = rebase --interactive origin/master
+  rios = rebase --interactive origin/support
+  rium = rebase --interactive upstream/master
+
+  # commit
+  c      = commit --verbose
+  ci     = commit -v
+  cm     = commit --verbose --message
+  ca     = commit --verbose --all
+  cam    = commit --verbose --all --message
+  camend = commit --amend --reuse-message HEAD
+  camendm= commit --amend --verbose
+  cp     = cherry-pick
+  # verbose alternatives
+  undo-last-commit = reset --soft "HEAD^"
+
+  #stash
+  ss = stash save
+  sp = stash pop
+  sl = stash list
+  sc = stash clear
+
+  # diff
+  d    = diff          # Diff working dir to index
+  dw   = diff -w       # Diff ignore whitespace
+  ds   = diff --staged # Diff index to HEAD
+  dc   = diff --staged # Diff index to HEAD
+  dh   = diff HEAD     # Diff working dir and index to HEAD
+  hub  = browse
+  hubd = compare
+
+  # index
+  s  = status
+  a  = add
+  ia = add
+  ir = reset
+  unstage = reset HEAD
+
+  # log
+  l   = log --topo-order --pretty=format:'%C(yellow)%h %C(cyan)%cn %C(blue)%cr%C(reset) %s'
+  ls  = log --topo-order --stat --pretty=format:'%C(bold)%C(yellow)Commit:%C(reset) %C(yellow)%H%C(red)%d%n%C(bold)%C(yellow)Author:%C(reset) %C(cyan)%an <%ae>%n%C(bold)%C(yellow)Date:%C(reset)   %C(blue)%ai (%ar)%C(reset)%n%+B'
+  ld  = log --topo-order --stat --patch --full-diff --pretty=format:'%C(bold)%C(yellow)Commit:%C(reset) %C(yellow)%H%C(red)%d%n%C(bold)%C(yellow)Author:%C(reset) %C(cyan)%an <%ae>%n%C(bold)%C(yellow)Date:%C(reset)   %C(blue)%ai (%ar)%C(reset)%n%+B'
+  lg  = log --topo-order --all --graph --pretty=format:'%C(yellow)%h%C(reset) %s %C(red)%d%C(reset)%n'
+  lga = log --topo-order --all --graph --pretty=format:'%C(yellow)%h %C(cyan)%cn%C(reset) %s %C(red)%d%C(reset)%n'
+  lm  = log --topo-order --pretty=format:'%s'
+  lh  = shortlog --summary --numbered
+  llf = fsck --lost-found
+  lme = log --author='Vincent Waller'
+
+  # show
+  sh = show HEAD
+
+  # remote
+  re  = remote
+  rel = remote --verbose
+  rea = remote add
+  rex = remote rm
+  rem = remote rename
+  rep = remote prune origin
+
+[color]
+  ui = auto
+[core]
+  excludesfile = ~/.gitignore-global
+  editor = vim -f
+[branch]
+  autosetupmerge = true
+[push]
+  default = tracking
+[apply]
+  whitespace = nowarn
+[difftool "Kaleidoscope"]
+  cmd = ksdiff --partial-changeset --relative-path \"$MERGED\" -- \"$LOCAL\" \"$REMOTE\"
+[diff]
+  tool = Kaleidoscope
+[difftool]
+  prompt = false
+[mergetool "Kaleidoscope"]
+  cmd = ksdiff --merge --output \"$MERGED\" --base \"$BASE\" -- \"$LOCAL\" --snapshot \"$REMOTE\" --snapshot
+  trustExitCode = true
+[mergetool]
+  prompt = false
+[merge]
+  tool = Kaleidoscope
