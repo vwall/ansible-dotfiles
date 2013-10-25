@@ -1,0 +1,4 @@
+---
+- hosts: dotfiles
+  roles:
+    - dotfiles
