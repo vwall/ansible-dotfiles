@@ -25,6 +25,8 @@ antigen bundle zsh-users/zsh-completions src
 # Load the theme.
 antigen theme robbyrussell
 
+PATH="/Applications/Postgres.app/Contents/MacOS/bin:$PATH"
+
 source /usr/local/opt/chruby/share/chruby/chruby.sh
 source /usr/local/opt/chruby/share/chruby/auto.sh
 
