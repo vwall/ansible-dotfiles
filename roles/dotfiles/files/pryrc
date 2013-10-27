@@ -12,7 +12,7 @@
 Pry.editor = ENV['EDITOR'] || 'vi'
 
 # Load the Rails configuration if Pry is running as a rails console.
-load File.dirname(__FILE__) + '/.railsrc' if defined?(Rails) && Rails.env
+#load File.dirname(__FILE__) + '/.railsrc' if defined?(Rails) && Rails.env
 
 
 # ------------------------------------------------------------------------------
