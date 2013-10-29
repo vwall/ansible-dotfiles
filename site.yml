@@ -1,4 +1,4 @@
-# file: site.yml
-
 ---
-- include: dotfiles.yml
+- hosts: dotfiles
+  roles:
+    - dotfiles
