@@ -1,0 +1,6 @@
+---
+- name: Install System Gems
+  gem: name={{ item }} state=latest
+  with_items:
+    - bundler
+    - foreman
