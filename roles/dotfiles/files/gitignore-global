@@ -4,5 +4,3 @@
 # Vim swap files
 .*.sw?
 
-# Bundler binstubs
-/bin/
