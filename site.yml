@@ -3,3 +3,4 @@
   roles:
     - brew
     - dotfiles
+    - gems
