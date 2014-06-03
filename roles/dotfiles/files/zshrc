@@ -36,9 +36,7 @@ POWERLINE_GIT_UNMERGED="═"
 # Load the theme.
 antigen theme ducknorris
 
-
-
-PATH="/Applications/Postgres93.app/Contents/MacOS/bin:$PATH"
+PATH="/Applications/Postgres.app/Contents/Versions/9.3/bin:$PATH"
 
 source /usr/local/opt/chruby/share/chruby/chruby.sh
 source /usr/local/opt/chruby/share/chruby/auto.sh
@@ -46,3 +44,4 @@ source /usr/local/opt/chruby/share/chruby/auto.sh
 # Tell antigen that you're done.
 antigen apply
 #env ARCHFLAGS="-arch x86_64" gem install pg -- --with-pg-config=/Applications/Postgres.app/Contents/MacOS/bin/pg_config
+
