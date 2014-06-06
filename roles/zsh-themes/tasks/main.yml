@@ -3,7 +3,6 @@
 - name : ensure target directory exists
   file: dest={{ zsh.theme.dir}} state=directory
 
-
 - name: copy themes
   copy: src={{ item }} dest={{zsh.theme.dir}}/{{ item | basename }}
   with_fileglob:

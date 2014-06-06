@@ -1,0 +1,36 @@
+---
+- name: Install macvim with luna
+  homebrew: name=macvim state=head install_options=with-cscope,with-lua
+
+ # Ensure our vim directory exists
+- name: ensure target directory exists
+  file:
+    dest={{ vim.home }}
+    state=directory
+  tags: vim
+
+- name: Add NeoBundle Repo
+  git: repo={{ neobundle.repo }} dest={{ neobundle.dest }}
+  tags: vim
+
+- name: build plugins for vimrc insert
+  assemble:
+    src=./vimrc_sections/plugins
+    dest=./roles/vim/files/vimrc_sections/_9_plugins
+    remote_src=false
+    delimiter=' '
+  tags: vim
+
+- name: build vimrc
+  assemble:
+    src=./vimrc_sections
+    dest={{vwall.home}}/.vimrc
+    remote_src=false
+    delimiter=' '
+  tags: vim
+
+- name: copy gvimrc file
+  copy:
+    src=gvimrc
+    dest={{vwall.home}}/.gvimrc
+  tags: vim

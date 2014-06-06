@@ -1,0 +1,7 @@
+---
+vim:
+  home: "{{ vwall.home }}/.vim"
+
+neobundle:
+  repo: "git://github.com/Shougo/neobundle.vim.git"
+  dest: "{{ vwall.home }}/.vim/bundle/neobundle.vim"
