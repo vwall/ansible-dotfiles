@@ -2,8 +2,10 @@
 - name: Git Repos
   git: repo={{ item.repo }} dest={{ item.dest }}
   with_items: dotfiles.vwall.git.repos
+  tags: dotfiles
 
 - name: copy dotfiles
   copy: src={{ item }} dest={{vwall.home}}/.{{ item | basename }}
   with_fileglob:
     - ./*
+  tags: dotfiles
