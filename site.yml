@@ -1,8 +1,8 @@
 ---
 - hosts: dotfiles
+  gather_facts: false
   roles:
     - brew
     - dotfiles
     - gems
     - zsh-themes
-    - vim

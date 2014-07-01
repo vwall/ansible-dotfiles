@@ -13,11 +13,15 @@ antigen bundle zsh-users/zsh-syntax-highlighting
 antigen bundle zsh-users/zsh-history-substring-search
 
 # bind UP and DOWN arrow keys
-for keycode in '[' '0'; do
-  bindkey "^[${keycode}A" history-substring-search-up
-  bindkey "^[${keycode}B" history-substring-search-down
-done
-unset keycode
+#for keycode in '[' '0'; do
+#  bindkey "^[${keycode}A" history-substring-search-up
+#  bindkey "^[${keycode}B" history-substring-search-down
+#done
+#unset keycode
+
+zmodload zsh/terminfo
+bindkey "$terminfo[kcuu1]" history-substring-search-up
+bindkey "$terminfo[kcud1]" history-substring-search-down
 
 # nicoulaj's moar completion files for zsh
 antigen bundle zsh-users/zsh-completions src
@@ -45,3 +49,4 @@ source /usr/local/opt/chruby/share/chruby/auto.sh
 antigen apply
 #env ARCHFLAGS="-arch x86_64" gem install pg -- --with-pg-config=/Applications/Postgres.app/Contents/Versions/9.3/bin/pg_config
 
+export EDITOR='subl -w'
