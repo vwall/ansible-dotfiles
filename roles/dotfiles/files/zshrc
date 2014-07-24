@@ -50,3 +50,5 @@ antigen apply
 #env ARCHFLAGS="-arch x86_64" gem install pg -- --with-pg-config=/Applications/Postgres.app/Contents/Versions/9.3/bin/pg_config
 
 export EDITOR='subl -w'
+
+eval "$(direnv hook $0)"

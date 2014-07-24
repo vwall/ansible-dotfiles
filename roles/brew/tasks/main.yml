@@ -5,6 +5,7 @@
     - git
     - wget
     - chruby
+    - direnv
     - ruby-install
     - elasticsearch
     - redis
