@@ -19,10 +19,10 @@ Pry.editor = ENV['EDITOR'] || 'vi'
 # Prompt
 # ------------------------------------------------------------------------------
 # Show the Ruby version (useful for RVM).
-Pry.prompt = [
-  lambda { |obj, nest_level, _| "#{RUBY_VERSION} (#{obj}):#{nest_level} > " },
-  lambda { |obj, nest_level, _| "#{RUBY_VERSION} (#{obj}):#{nest_level} * " }
-]
+#Pry.prompt = [
+#  lambda { |obj, nest_level, _| "#{RUBY_VERSION} (#{obj}):#{nest_level} > " },
+#  lambda { |obj, nest_level, _| "#{RUBY_VERSION} (#{obj}):#{nest_level} * " }
+#]
 
 
 # ------------------------------------------------------------------------------
