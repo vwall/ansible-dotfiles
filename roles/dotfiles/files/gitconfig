@@ -105,7 +105,7 @@
   ui = auto
 [core]
   excludesfile = ~/.gitignore-global
-  editor = vim -f
+  editor = subl -n -w
 [branch]
   autosetupmerge = true
 [push]
