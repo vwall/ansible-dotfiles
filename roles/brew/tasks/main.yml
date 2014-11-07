@@ -7,5 +7,4 @@
     - chruby
     - direnv
     - ruby-install
-    - elasticsearch
-    - redis
+    - wrk
