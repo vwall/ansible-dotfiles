@@ -4,3 +4,8 @@
   with_items:
     - bundler
     - foreman
+    - nokogiri
+    - pg
+    - pry
+    - hirb
+
