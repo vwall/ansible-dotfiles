@@ -40,14 +40,15 @@ POWERLINE_GIT_UNMERGED="═"
 # Load the theme.
 antigen theme ducknorris
 
-PATH="/Applications/Postgres.app/Contents/Versions/9.3/bin:$PATH"
+PATH="/Applications/Postgres.app/Contents/Versions/9.4/bin:$PATH"
 
 source /usr/local/opt/chruby/share/chruby/chruby.sh
 source /usr/local/opt/chruby/share/chruby/auto.sh
+source /usr/local/share/gem_home/gem_home.sh
 
 # Tell antigen that you're done.
 antigen apply
-#env ARCHFLAGS="-arch x86_64" gem install pg -- --with-pg-config=/Applications/Postgres.app/Contents/Versions/9.3/bin/pg_config
+#env ARCHFLAGS="-arch x86_64" gem install pg -- --with-pg-config=/Applications/Postgres.app/Contents/Versions/9.4/bin/pg_config
 
 export EDITOR='subl -w'
 
