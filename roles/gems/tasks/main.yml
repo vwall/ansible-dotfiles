@@ -8,4 +8,5 @@
     - pg
     - pry
     - hirb
+    - gist
 
