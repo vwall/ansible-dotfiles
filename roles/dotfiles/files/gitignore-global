@@ -4,3 +4,4 @@
 # Vim swap files
 .*.sw?
 
+.envrc

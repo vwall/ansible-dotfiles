@@ -24,7 +24,7 @@
 - name: build vimrc
   assemble:
     src=./vimrc_sections
-    dest={{vwall.home}}/.vimrc
+    dest={{users.nix.home}}/.vimrc
     remote_src=false
     delimiter=' '
   tags: vim
@@ -32,5 +32,5 @@
 - name: copy gvimrc file
   copy:
     src=gvimrc
-    dest={{vwall.home}}/.gvimrc
+    dest={{users.nix.home}}/.gvimrc
   tags: vim

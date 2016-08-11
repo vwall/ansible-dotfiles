@@ -1,6 +1,7 @@
 ---
 - name: Install libraries with homebrew
   homebrew: name={{ item }} state=present
+  tags: brew
   with_items:
     - git
     - wget

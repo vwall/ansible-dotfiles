@@ -1,8 +1,14 @@
 check:
-	ansible-playbook -i  hosts site.yml --check --diff -c local
+	ansible-playbook -i  hosts site.yml --check --diff -c local -u nix
 
 install:
-	ansible-playbook -i hosts site.yml -c local
+	ansible-playbook -i hosts site.yml -c local -u nix
+
+brew:
+	ansible-playbook -i hosts site.yml -c local -u nix --tags brew
+
+gems:
+	ansible-playbook -i hosts site.yml -c local -u nix --tags gems
 
 dotfiles:
 	ansible-playbook -i hosts site.yml -c local --tags dotfiles

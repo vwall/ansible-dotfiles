@@ -5,6 +5,7 @@ antigen use oh-my-zsh
 
 antigen bundle git
 antigen bundle command-not-found
+antigen bundle rails
 
 # Syntax highlighting bundle.
 antigen bundle zsh-users/zsh-syntax-highlighting
@@ -42,9 +43,12 @@ antigen theme ducknorris
 
 PATH="/Applications/Postgres.app/Contents/Versions/9.4/bin:$PATH"
 
-source /usr/local/opt/chruby/share/chruby/chruby.sh
-source /usr/local/opt/chruby/share/chruby/auto.sh
-source /usr/local/share/gem_home/gem_home.sh
+#source /usr/local/opt/chruby/share/chruby/chruby.sh
+#source /usr/local/opt/chruby/share/chruby/auto.sh
+#source /usr/local/share/gem_home/gem_home.sh
+
+alias cxoneapp='cp ~/.cloud66/cx.json.1app ~/.cloud66/cx.json'
+alias cxme='cp ~/.cloud66/cx.json.me ~/.cloud66/cx.json'
 
 # Tell antigen that you're done.
 antigen apply

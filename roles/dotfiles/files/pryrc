@@ -197,7 +197,6 @@ end
 
 Pry.config.commands.import default_command_set
 
-
 # ------------------------------------------------------------------------------
 # Extensions
 # ------------------------------------------------------------------------------
@@ -214,8 +213,6 @@ class Hash
     Hash[Array.toy(n).zip(Array.toy(n) {|c| (96 + ( c + 1)).chr})]
   end
 end
-
-
 
 def pbcopy(str)
   IO.popen('pbcopy', 'r+') {|io| io.puts str }
@@ -234,5 +231,9 @@ Pry.config.commands.command "copy", "Copy to clipboard" do |str|
 end
 
 Pry.config.commands.command "lastcopy", "Last result copy to clipboard" do
-  pbcopy _pry_.last_result.chomp
+  if _pry_.last_result.is_a? String
+    pbcopy _pry_.last_result.chomp
+  else
+    pbcopy _pry_.last_result
+  end
 end

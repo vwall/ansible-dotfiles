@@ -1,12 +1,13 @@
 ---
 - name: Install System Gems
-  gem: name={{ item }} state=latest
+  gem: name={{ item }} state=latest user_install=no
   with_items:
     - bundler
     - foreman
+    - invoker
     - nokogiri
     - pg
     - pry
     - hirb
     - gist
-
+  tags: gems
