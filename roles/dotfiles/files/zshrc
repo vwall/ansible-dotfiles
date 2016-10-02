@@ -41,7 +41,7 @@ POWERLINE_GIT_UNMERGED="═"
 # Load the theme.
 antigen theme ducknorris
 
-PATH="/Applications/Postgres.app/Contents/Versions/9.4/bin:$PATH"
+PATH="/Applications/Postgres.app/Contents/Versions/latest/bin:$PATH"
 
 #source /usr/local/opt/chruby/share/chruby/chruby.sh
 #source /usr/local/opt/chruby/share/chruby/auto.sh
