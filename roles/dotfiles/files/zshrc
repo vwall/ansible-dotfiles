@@ -26,7 +26,7 @@ bindkey "$terminfo[kcud1]" history-substring-search-down
 
 # nicoulaj's moar completion files for zsh
 antigen bundle zsh-users/zsh-completions src
-
+POWERLINE_HIDE_HOST_NAME="true"
 POWERLINE_DISABLE_RPROMPT="true"
 POWERLINE_DETECT_SSH="true"
 POWERLINE_GIT_CLEAN="✔"
