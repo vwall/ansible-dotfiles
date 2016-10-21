@@ -9,3 +9,4 @@
     - direnv
     - ruby-install
     - wrk
+    - tree
