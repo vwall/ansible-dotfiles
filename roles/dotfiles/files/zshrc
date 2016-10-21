@@ -7,11 +7,15 @@ antigen bundle git
 antigen bundle command-not-found
 antigen bundle rails
 
-# Syntax highlighting bundle.
-antigen bundle zsh-users/zsh-syntax-highlighting
+
+# nicoulaj's moar completion files for zsh
+antigen bundle zsh-users/zsh-completions src
 
 # ZSH port of Fish shell's history search feature
 antigen bundle zsh-users/zsh-history-substring-search
+
+# Syntax highlighting bundle.
+antigen bundle zsh-users/zsh-syntax-highlighting
 
 # bind UP and DOWN arrow keys
 #for keycode in '[' '0'; do
@@ -24,8 +28,9 @@ zmodload zsh/terminfo
 bindkey "$terminfo[kcuu1]" history-substring-search-up
 bindkey "$terminfo[kcud1]" history-substring-search-down
 
-# nicoulaj's moar completion files for zsh
-antigen bundle zsh-users/zsh-completions src
+
+
+# Theme settings
 POWERLINE_HIDE_HOST_NAME="true"
 POWERLINE_DISABLE_RPROMPT="true"
 POWERLINE_DETECT_SSH="true"
