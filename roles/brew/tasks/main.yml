@@ -10,3 +10,4 @@
     - ruby-install
     - wrk
     - tree
+    - httpie
